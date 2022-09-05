@@ -17,7 +17,7 @@ module.exports = handle = (client, Client) => {
         Client.cmd.on('ytmp4', async (data) => {
             try {
                 if(isLimit(data.sender)) return data.reply(mess.limit)
-                if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}ytmp4 [ link ]*\nContoh : ${data.prefix}ytmp4 https://www.youtube.com/watch?v=0maWbr0FHKY`)
+                if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}ytmp4 [ link ]*\nContoh : ${data.prefix}ytmp4 https://www.youtube.com/watch?v=-LLJ_Ywt1zE`)
                 data.reply(mess.wait)
                 res = await axios.get(`${configs.apiUrl}/api/ytmp4/2?apikey=${configs.zeksKey}&url=${data.body}`)
                 if(res.data.status == false) data.reply(res.data.message)
@@ -33,7 +33,7 @@ module.exports = handle = (client, Client) => {
         Client.cmd.on('ytmp3', async (data) => {
             try {
                 if(isLimit(data.sender)) return data.reply(mess.limit)
-                if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}ytmp3 [ link ]*\nContoh : ${data.prefix}ytmp3 https://www.youtube.com/watch?v=0maWbr0FHKY`)
+                if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}ytmp3 [ link ]*\nContoh : ${data.prefix}ytmp3 https://www.youtube.com/watch?v=5qFjlBXsXlo`)
                 data.reply(mess.wait)
                 res = await axios.get(`${configs.apiUrl}/api/ytmp3/2?apikey=${configs.zeksKey}&url=${data.body}`)
                 if(res.data.status == false) data.reply(res.data.message)
@@ -105,7 +105,7 @@ module.exports = handle = (client, Client) => {
         Client.cmd.on('joox', async (data) => {
             try {
                 if(isLimit(data.sender)) return data.reply(mess.limit)
-                if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}joox [ lagu ]*\nContoh : ${data.prefix}joox bad liar`)
+                if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}joox [ lagu ]*\nContoh : ${data.prefix}joox Kisah Sempurna`)
                 data.reply(mess.wait)
                 res = await axios.get(`${configs.apiUrl}/api/joox?apikey=${configs.zeksKey}&q=${data.body}`)
                 if(res.data.status == false) data.reply(jox.data.message)
